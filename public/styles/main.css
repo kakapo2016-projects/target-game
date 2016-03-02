@@ -1,0 +1,25 @@
+.cell {
+	height: 50px;
+	width: 50px;
+	border: solid;
+	border-width: 2px;
+	border-color: gray;
+	float: left;
+}
+
+#letter-table {
+	width: 180px;
+}
+
+#word-list-div {
+	height: 200px;
+	width: 400px;
+	background-color: #E1F2FE;
+	float: left;
+	margin-top: 30px;
+}
+
+#end-game-buttons {
+	margin-top: 30px;
+}
+
