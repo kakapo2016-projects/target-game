@@ -1,0 +1,39 @@
+{
+  "name": "target-game",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "node test/*.js | tap-spec",
+    "start": "nodemon ./server/server.js",
+    "build": "watchify index.js -o bundle.js -v"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kakapo2016-projects/target-game.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kakapo2016-projects/target-game/issues"
+  },
+  "homepage": "https://github.com/kakapo2016-projects/target-game#readme",
+  "devDependencies": {
+    "nodemon": "^1.9.1",
+    "supertest": "^1.2.0",
+    "tap-spec": "^4.1.1",
+    "tape": "^4.4.0",
+    "watchify": "^3.7.0"
+  },
+  "dependencies": {
+    "body-parser": "^1.15.0",
+    "dotenv": "^2.0.0",
+    "express": "^4.13.4",
+    "knex": "^0.10.0",
+    "sqlite3": "^3.1.1",
+    "superagent": "^1.8.0-beta.2"
+  }
+}
