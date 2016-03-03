@@ -1,8 +1,8 @@
 var express = require('express')
 var bodyParser = require('body-parser')
 var app = express()
-
-
+var passport = require('../passport/authentication')
+process.env.NODE_ENV = process.env.NODE_ENV || 'development'
 // app.use(express.static('public'));
 
 // app.get('/', function(req, res) {
@@ -58,6 +58,15 @@ app.post('/word', function (req, res) {
                   "word": ""
                })
 })
+
+
+
+//Authentication
+app.get('/login', 
+  passport.authentictate('facebook', { failureRedirect: '/login'})),
+    function (req, res) {
+      res.redirect('/')
+    }
 
 // -------- set up port ------------
 
