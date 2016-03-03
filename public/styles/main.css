@@ -1,25 +1,63 @@
+h1 {
+	text-align: center;
+	font-family: 'Lato', sans-serif;
+	padding-bottom: 15px;
+	font-size: 7vw;
+}
+
+/*div {
+	border: 1px solid red;
+
+}*/
+
 .cell {
-	height: 50px;
-	width: 50px;
+	height: 150px;
+	width: 150px;
 	border: solid;
+	font-size: 4vw;
 	border-width: 2px;
 	border-color: gray;
 	float: left;
 }
 
+.cell:hover {
+	background-color: #99ccff;
+}
+
 #letter-table {
-	width: 180px;
+	width: 500px;
+
 }
 
 #word-list-div {
 	height: 200px;
-	width: 400px;
-	background-color: #E1F2FE;
+	width: 450px;
+	margin-right: 20px;
+
+	/*background-color: #E1F2FE;*/
 	float: left;
 	margin-top: 30px;
+
+	border-radius: 20px 20px 20px 20px;
+-moz-border-radius: 20px 20px 20px 20px;
+-webkit-border-radius: 20px 20px 20px 20px;
+border: 0px solid #000000;
+
+-webkit-box-shadow: 4px 25px 105px -1px rgba(0,0,0,0.75);
+-moz-box-shadow: 4px 25px 105px -1px rgba(0,0,0,0.75);
+box-shadow: 4px 25px 105px -1px rgba(0,0,0,0.75);
 }
 
 #end-game-buttons {
 	margin-top: 30px;
 }
 
+.column {
+	margin: 0;
+	text-align: center;
+}
+
+
+#word-list {
+	color: red;
+}
