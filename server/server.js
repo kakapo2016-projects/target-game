@@ -45,7 +45,7 @@ app.get('/', function(req, res) {
 })
 
 app.post('/word', function (req, res) {
-
+	console.log(req.body)
   //get word from request eg new. check word isValid if yes return json {answer: yes, word, new} else return no
   console.log('req.body is:', req.body.word)
   if(isValid(req.body.word)) ///This is NOT a real function! please see line 23
