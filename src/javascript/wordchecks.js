@@ -91,6 +91,7 @@ function isValid(word, initialWord, arrayPrevious){
   // } 
   console.log("what a failure")
   return false
+  }
 }
 
 // console.log(checkDictionary('cat'))

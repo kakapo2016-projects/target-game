@@ -1,10 +1,10 @@
-var getRequest = require("./getrequest")
+// var getRequest = require("./getrequest")
 
-module.exports =function(){
+// module.exports =function(){
 
-	getRequest()
+// 	getRequest()
 
-	console.log("hello from display word list")
+// 	console.log("hello from display word list")
 
 
-}
+// }

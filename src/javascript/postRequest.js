@@ -1,12 +1,17 @@
 var request = require('superagent')
 var path = require('path')
+var appendToList = require('./appendToList')
 
-module.exports = function (object, callback) {
-	var newString = JSON.stringify(object)
-	console.log(typeof newString, newString)
+
+module.exports = function (newWord, callback) {
+	console.log(typeof newWord, newWord)
 	request
 		.post('http://localhost:3000/word')
-		.send(newString)
-		.end(callback)
+		.send({ "word": newWord })
+		.end(function(err, res) {
+			console.log('res', res)
+			appendToList(res.body.word)
+	// var cellarArray = []
+})
 }
 //problems here
