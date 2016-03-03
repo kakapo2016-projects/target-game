@@ -1,9 +1,18 @@
+<<<<<<< HEAD
 var express = require('express')
 var bodyParser = require('body-parser')
 var app = express()
 var passport = require('../passport/authentication')
 process.env.NODE_ENV = process.env.NODE_ENV || 'development'
+=======
+// var express = require('express')
+// var bodyParser = require('body-parser')
+// var app = express()
+
+
+>>>>>>> 70d4db361d14aef0d4f180c4e7f43f0465bbedc2
 // app.use(express.static('public'));
+
 
 // app.get('/', function(req, res) {
 //   res.render('/')
@@ -11,14 +20,13 @@ process.env.NODE_ENV = process.env.NODE_ENV || 'development'
 
 
 // app.post('/word', function (req, res) {
+// console.log(req)
 //   console.log('req.body is:', req.body.word)
-// })
-
-
 
 // app.listen(3000, function () {
 //   console.log('Server Running On Port: 3000')
 // }) 
+
 //please change
 function isValid(word) {
   return true
@@ -45,12 +53,13 @@ app.get('/', function(req, res) {
 })
 
 app.post('/word', function (req, res) {
+	console.log(req.body)
   //get word from request eg new. check word isValid if yes return json {answer: yes, word, new} else return no
-  console.log('req.body is:', req.body.word)
+  console.log('req.body.word is:', req.body.word)
   if(isValid(req.body.word)) ///This is NOT a real function! please see line 23
     res.json({
                   "answer": "yes",
-                    "word": "apples"
+                    "word": req.body.word
                  })
   else
   res.json({
