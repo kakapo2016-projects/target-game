@@ -5,16 +5,73 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Target Game</title>
-    <link rel="stylesheet" type="text/css" href="styles/main.css">
+    <link href='https://fonts.googleapis.com/css?family=Lato:100' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css">
+      <link rel="stylesheet" type="text/css" href="styles/main.css">
+
     
   </head>
   <body>
+    <div class ="row">
+      <h1>Welcome to our target game!</h1>
+        <div class="two column">
+        </div> 
+        <div class="eight column offset-by-four">
+        <div class="row">
+          <div id="letter-table" class="two columns">
+            <span id="row1">
+              <span class="cell col1">B</span>
+              <span class="cell col2">A</span>
+              <span class="cell col3">P</span>
+            <span>
+          <span id="row2">
+            <span class="cell col1">R</span>
+            <span class="cell col2">I</span>
+            <span class="cell col3">H</span>
+          <span>
+          <span id="row3">
+            <span class="cell col1">Y</span>
+            <span class="cell col2">G</span>
+            <span class="cell col3">O</span>
+          <span>
+        </div>        
+        </div>         
+      <div class="row">
+          <form>
+              <input id="new-word-input" type="text" name="submit-word"><br>
+              <input id="submit-button" type="submit" value="Submit word">
+          </form>
+        </div>
+        <div class="row">
+          <div class="spacer one column">
+          </div>
+          <div id="word-list-div" class="one-half column">
+            <h5>Word List:</h5>
+            <ul id="word-list">
+
+              <!-- Append list items (submitted words) here -->
+            </ul>
+      </div>
+        </div> 
+         <div class="two column">
+        </div>        
+    </div>
+   <script src="../bundle.js" type="text/javascript"></script>
+  </body>
+</html>
+
+
+
+
+
+<!-- 
+
+
   	<div class="row">
   		<div class="spacer one column">
   		</div>
-	  	<h1 class="eleven columns">Welcome to our target game!</h1>
+	  	
 	  </div>
   	<div class="row">
   		<div class="spacer one column">
@@ -50,10 +107,10 @@
 	  		<h5>Word List:</h5>
 	  		<ul id="word-list">
 
-	  			<!-- Append list items (submitted words) here -->
-	  		</ul>
+	  			<! Append list items (submitted words) here -->
+<!-- 	  		</ul>
 	  	</div>
-		</div>
+		</div> -->
 <!--   	<div id="end-game-buttons" class="row">
   		<div class="spacer one column">
   		</div>
@@ -64,6 +121,6 @@
 		  	</button>
 		  </div>
 		</div> -->
-		<script src="../bundle.js" type="text/javascript"></script>
+<!-- 		<script src="../bundle.js" type="text/javascript"></script>
   </body>
-</html>
+</html> -->
