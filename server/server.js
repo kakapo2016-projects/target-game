@@ -1,43 +1,17 @@
-<<<<<<< HEAD
 var express = require('express')
 var bodyParser = require('body-parser')
 var app = express()
 var passport = require('../passport/authentication')
 process.env.NODE_ENV = process.env.NODE_ENV || 'development'
-=======
-// var express = require('express')
-// var bodyParser = require('body-parser')
-// var app = express()
+// var isValid = require('./isValid.js')
 
-
->>>>>>> 70d4db361d14aef0d4f180c4e7f43f0465bbedc2
 // app.use(express.static('public'));
-
-
-// app.get('/', function(req, res) {
-//   res.render('/')
-// })
-
-
-// app.post('/word', function (req, res) {
-// console.log(req)
-//   console.log('req.body is:', req.body.word)
-
-// app.listen(3000, function () {
-//   console.log('Server Running On Port: 3000')
-// }) 
 
 //please change
 function isValid(word) {
   return true
 }
 
-
-var express = require('express')
-var bodyParser = require('body-parser')
-// var isValid = require('./isValid.js')
-
-var app = express()
 
 //  -------- set up middleware -------------
 
@@ -69,7 +43,6 @@ app.post('/word', function (req, res) {
 })
 
 
-
 //Authentication
 app.get('/login', 
   passport.authentictate('facebook', { failureRedirect: '/login'})),
@@ -82,4 +55,3 @@ app.get('/login',
 app.listen(3000, function () {
   console.log('Server Running On Port: 3000')
 }) 
-
