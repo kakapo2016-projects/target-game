@@ -12,7 +12,6 @@ function isValid(word) {
   return true
 }
 
-
 //  -------- set up middleware -------------
 
 app.use(bodyParser.urlencoded({ extended: false })) 
@@ -45,7 +44,7 @@ app.post('/word', function (req, res) {
 
 //Authentication
 app.get('/login', 
-  passport.authentictate('facebook', { failureRedirect: '/login'})),
+  passport.authenticate('facebook', { failureRedirect: '/login'})),
     function (req, res) {
       res.redirect('/')
     }
