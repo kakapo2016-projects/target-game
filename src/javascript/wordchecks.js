@@ -1,4 +1,4 @@
-var teacher = require('teacher');
+// var teacher = require('teacher');
 
 var initialWord = "biography"
 var splitInitialWord = initialWord.split("")
