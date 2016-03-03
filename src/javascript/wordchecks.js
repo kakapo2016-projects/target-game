@@ -62,47 +62,47 @@ function testWordInitial(word,initialWord){
 }
 
 //check if it is in the dictionary
-function checkDictionary(word) {
-  teacher.check(word, function(err, data) {
-    console.log(data)
-    if (data === null){
-      console.log('yes')
-      return true
-    }
-    else {
-      console.log('no')
-      return false
-    }
-    console.log("hi")
-  });
-}
+// function checkDictionary(word, callback) {
+//   teacher.check(word, function(err, data) {
+//     console.log(data)
+//     if (data === null){
+//       console.log('yes')
+      
+//     }
+//     else {
+//       console.log('no')
+      
+//     }
+//     console.log("hi")
+//   });
+// }
 
 //check everything
 
-function checkEverything(word, initialWord, arr){
+function isValid(word, initialWord, arrayPrevious){
   if (testWordLength(word) && checkDuplicates(word) && testWordInitial(word,initialWord) && checkPreviouslySubmitted(word, arr)){
-    if (checkDictionary(word) === true){
+    // if (checkDictionary(word) === true){
       console.log("success")
-      return true}
-    else {
-      console.log('youre a failure')
-      return false
-    }
-  } 
+      return true
+    } else {
+  //     console.log('youre a failure')
+  //     return false
+  //   }
+  // } 
   console.log("what a failure")
   return false
 }
 
-console.log(checkDictionary('cat'))
-console.log(checkDictionary('fjrheigrueibviurehbv'))
+// console.log(checkDictionary('cat'))
+// console.log(checkDictionary('fjrheigrueibviurehbv'))
 
-// checkEverything(testWordPass, initialWord, examplePreviousArray);
-// checkEverything(testWordPass2, initialWord, examplePreviousArray);
-// checkEverything(testWordFail, initialWord, examplePreviousArray);
-// checkEverything(testWordFail2, initialWord, examplePreviousArray);
-// checkEverything(testWordFail3, initialWord, examplePreviousArray);
-// checkEverything(testWordFail4, initialWord, examplePreviousArray);
-// checkEverything(testWordFail5, initialWord, examplePreviousArray);
+// isValid(testWordPass, initialWord, examplePreviousArray);
+// isValid(testWordPass2, initialWord, examplePreviousArray);
+// isValid(testWordFail, initialWord, examplePreviousArray);
+// isValid(testWordFail2, initialWord, examplePreviousArray);
+// isValid(testWordFail3, initialWord, examplePreviousArray);
+// isValid(testWordFail4, initialWord, examplePreviousArray);
+// isValid(testWordFail5, initialWord, examplePreviousArray);
 // checkDuplicates('happy')
 // checkDuplicates('biography')
 // checkDuplicates('biographography')
