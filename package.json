@@ -9,7 +9,7 @@
   "scripts": {
     "test": "node test/*.js | tap-spec",
     "start": "nodemon ./server/server.js",
-    "build": "watchify ./index.js -o ./public/bundle.js -v"
+    "build": "watchify ./index.js -o ./public/bundle.js -dv"
   },
   "repository": {
     "type": "git",

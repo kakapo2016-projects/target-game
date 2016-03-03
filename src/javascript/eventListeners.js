@@ -1,18 +1,12 @@
 var $ = require('jquery')
-var displayWordList = require('./displayWordList.js')
 var postRequest = require('./postRequest')
 
 $(document).ready(function() {
 
-  displayWordList()
-
-  $('#submit-button').click(function() {
-  	var newWord = {}
-  	console.log($('#new-word-input').val())
+  $('#submit-button').click(function(e) {
+  	e.preventDefault()
   	newWord = $('#new-word-input').val()
-	console.log('click')
-	console.log("New Word", newWord)
-	postRequest(newWord, displayWordList())
+	postRequest(newWord)
   })
 })
 
