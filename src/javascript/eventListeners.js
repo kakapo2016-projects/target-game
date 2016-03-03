@@ -7,6 +7,7 @@ $(document).ready(function() {
   	e.preventDefault()
   	newWord = $('#new-word-input').val()
 	postRequest(newWord)
+	$('#new-word-input').val('')
   })
 })
 
