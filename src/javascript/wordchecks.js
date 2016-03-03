@@ -2,7 +2,7 @@
 
 var initialWord = "biography"
 var splitInitialWord = initialWord.split("")
-console.log(splitInitialWord)
+// console.log(splitInitialWord)
 
 var testWordPass = 'graph'
 var testWordPass2 = 'bog'
@@ -67,11 +67,11 @@ function testWordInitial(word,initialWord){
 //     console.log(data)
 //     if (data === null){
 //       console.log('yes')
-      
+
 //     }
 //     else {
 //       console.log('no')
-      
+
 //     }
 //     console.log("hi")
 //   });
@@ -82,16 +82,24 @@ function testWordInitial(word,initialWord){
 function isValid(word, initialWord, arrayPrevious){
   if (testWordLength(word) && checkDuplicates(word) && testWordInitial(word,initialWord) && checkPreviouslySubmitted(word, arr)){
     // if (checkDictionary(word) === true){
-      console.log("success")
+      // console.log("success")
       return true
     } else {
   //     console.log('youre a failure')
   //     return false
   //   }
-  // } 
-  console.log("what a failure")
+  // }
+  // console.log("what a failure")
   return false
   }
+}
+
+module.exports = {
+  testWordLength: testWordLength,
+  checkPreviouslySubmitted: checkPreviouslySubmitted,
+  checkDuplicates: checkDuplicates,
+  testWordInitial: testWordInitial,
+  isValid: isValid
 }
 
 // console.log(checkDictionary('cat'))
