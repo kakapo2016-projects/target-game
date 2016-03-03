@@ -8,5 +8,9 @@ $(document).ready(function() {
   	newWord = $('#new-word-input').val()
 	postRequest(newWord)
   })
+
+  
+
+  
 })
 
