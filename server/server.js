@@ -1,8 +1,16 @@
+<<<<<<< HEAD
+var express = require('express')
+var bodyParser = require('body-parser')
+var app = express()
+var passport = require('../passport/authentication')
+process.env.NODE_ENV = process.env.NODE_ENV || 'development'
+=======
 // var express = require('express')
 // var bodyParser = require('body-parser')
 // var app = express()
 
 
+>>>>>>> 70d4db361d14aef0d4f180c4e7f43f0465bbedc2
 // app.use(express.static('public'));
 
 
@@ -59,6 +67,15 @@ app.post('/word', function (req, res) {
                   "word": ""
                })
 })
+
+
+
+//Authentication
+app.get('/login', 
+  passport.authentictate('facebook', { failureRedirect: '/login'})),
+    function (req, res) {
+      res.redirect('/')
+    }
 
 // -------- set up port ------------
 
