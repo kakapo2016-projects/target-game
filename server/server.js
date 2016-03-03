@@ -3,13 +3,15 @@ var bodyParser = require('body-parser')
 var app = express()
 var passport = require('../passport/authentication')
 process.env.NODE_ENV = process.env.NODE_ENV || 'development'
+var routes = require('./routes')
 // var isValid = require('./isValid.js')
 
 // app.use(express.static('public'));
 
 //please change
 function isValid(word) {
-  return true
+  //randomly chooses true or false
+  return (Math.floor(Math.random()*2) === 1) 
 }
 
 //  -------- set up middleware -------------
@@ -44,10 +46,10 @@ app.post('/word', function (req, res) {
 
 //Authentication
 app.get('/login', 
-  passport.authenticate('facebook', { failureRedirect: '/login'})),
+  passport.authenticate('facebook', {scope: ['email']}, { failureRedirect: '/login'})),
     function (req, res) {
       res.redirect('/')
-    }
+}
 
 // -------- set up port ------------
 
