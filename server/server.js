@@ -51,7 +51,7 @@ app.post('/word', function (req, res) {
   if(isValid(req.body.word)) ///This is NOT a real function! please see line 23
     res.json({
                   "answer": "yes",
-                    "word": "apples"
+                    "word": req.body.word
                  })
   else
   res.json({

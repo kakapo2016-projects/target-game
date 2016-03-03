@@ -4,7 +4,6 @@ var path = require('path')
 
 function getFromServer (callback) {
 
-console.log("in getfromServer")
 	request
 		.get('http://localhost:3000/word')
 		.end(callback)
