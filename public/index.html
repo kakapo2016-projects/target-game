@@ -10,13 +10,13 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css">
       <link rel="stylesheet" type="text/css" href="styles/main.css">
 
-    
+
   </head>
   <body>
     <div class ="row">
       <h1>Welcome to our target game!</h1>
         <div class="two column">
-        </div> 
+        </div>
         <div class="eight column offset-by-four">
         <div class="row">
           <div id="letter-table" class="two columns">
@@ -35,14 +35,14 @@
             <span class="cell col2">G</span>
             <span class="cell col3">O</span>
           <span>
-        </div>        
-        </div>         
+        </div>
+        </div>
       <div class="row">
           <form>
               <input id="new-word-input" type="text" name="submit-word"><br>
               <input id="submit-button" type="submit" value="Submit word">
           </form>
-          <h3>Score: </h3>
+          <h3 id="score">Score: <span id="score-span"> </span></h3>
         </div>
         <div class="row">
           <div class="spacer one column">
@@ -54,9 +54,9 @@
               <!-- Append list items (submitted words) here -->
             </ul>
           </div>
-        </div> 
+        </div>
          <div class="two column">
-        </div>        
+        </div>
     </div>
    <script src="../bundle.js" type="text/javascript"></script>
   </body>
