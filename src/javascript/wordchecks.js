@@ -13,7 +13,7 @@ var testWordFail4 = 'cat' // not all letters are in initial word
 var testWordFail5 = 'god' // already been used
 
 var examplePreviousArray = ['hello', 'god', 'goodbye']
-
+var arr = []
 //check if it has too many letters
 
 function testWordLength(word){
