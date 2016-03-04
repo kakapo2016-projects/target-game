@@ -11,26 +11,35 @@ var dotenv = require('dotenv')
 
 dotenv.load()
 
-passport.use(
-      new FacebookStrategy( {
-          clientID : process.env.CLIENT_ID,
-          clientSecret : process.env.CLIENT_SECRET,
-          callbackURL : 'http://localhost:3000/', 
-          profile: ['id', 'displayName', 'email']
-        },
-        function (accessToken, refreshToken, profile, callback) {
-         
-// knex select from scoreboard by email
+// passport.use(
+//       new FacebookStrategy( {
+//           clientID : process.env.CLIENT_ID,
+//           clientSecret : process.env.CLIENT_SECRET,
+//           callbackURL : 'http://localhost:3000/', 
+//           profile: ['id', 'displayName', 'email']
+//         },
+//         function (accessToken, refreshToken, profile, callback) {
+//          //is user an existing user?
+        
+//          knex.raw('SELECT * FROM ' + 'scoreboard' + ' WHERE id= '+ profile.id)
+//             .then(function(resp) {
+//               console.log(resp)
 
-            // if found
-              // callback(null, user)
-            // else not found
-              // create new user with profile. knex scoreboard insert new user
-                // save user to db
+//             callback(null, resp)
+//               })
+//             }))
 
-          return callback(null, profile)
-      })
-  )
+//           knex('scoreboard').insert(profile).then(function(resp) {
+//             callback(null, resp)
+//             // if found
+//               // callback(null, user)
+//             // else not found
+//               // create new user with profile. knex scoreboard insert new user
+//                 // save user to db
+
+//           return callback(null, profile)
+//       })
+  
 
 
 passport.serializeUser(function(user, callback) {
