@@ -3,13 +3,15 @@ var bodyParser = require('body-parser')
 var app = express()
 var passport = require('../passport/authentication')
 process.env.NODE_ENV = process.env.NODE_ENV || 'development'
-// var isValid = require('./isValid.js')
-
+var routes = require('./routes')
+// var isValid = require('../src/javascript/wordchecks.js').isValid
+// console.log(isValid())
 // app.use(express.static('public'));
 
-//please change
+// please change
 function isValid(word) {
-  return true
+  //randomly chooses true or false
+  return (Math.floor(Math.random()*2) === 1) 
 }
 
 //  -------- set up middleware -------------
@@ -29,7 +31,7 @@ app.post('/word', function (req, res) {
 	console.log(req.body)
   //get word from request eg new. check word isValid if yes return json {answer: yes, word, new} else return no
   console.log('req.body.word is:', req.body.word)
-  if(isValid(req.body.word)) ///This is NOT a real function! please see line 23
+  if(isValid(req.body.word))
     res.json({
                   "answer": "yes",
                     "word": req.body.word
@@ -44,10 +46,10 @@ app.post('/word', function (req, res) {
 
 //Authentication
 app.get('/login', 
-  passport.authenticate('facebook', { failureRedirect: '/login'})),
+  passport.authenticate('facebook', {scope: ['email']}, { failureRedirect: '/login'})),
     function (req, res) {
       res.redirect('/')
-    }
+}
 
 // -------- set up port ------------
 

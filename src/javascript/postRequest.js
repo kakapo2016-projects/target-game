@@ -8,6 +8,11 @@ module.exports = function (newWord, callback) {
 		.post('http://localhost:3000/word')
 		.send({ "word": newWord })
 		.end(function(err, res) {
-			appendToList(res.body.word)
+			if (res.body.answer ==='yes') {
+				appendToList(res.body.word)
+			}
+			else {
+				alert('Sorry! Try again')
+			}
 })
 }
