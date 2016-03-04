@@ -15,9 +15,14 @@ var expectedResult = true
 test('test of foo and bar', function(t){
   //action: call the function and assign to 'actualSmthng'
   var actualResult = testWordLength(clearlyRight)
+  var isValBadResult = isValid("cat", "biography", [])
+  var isValGoodResult = isValid("gap", "biography", [])
+
 
   //assert: test if actual equals expected
   t.equal(actualResult, expectedResult, "testWordLength looks mighty good to me!")
+  t.equal(isValBadResult, false, "isValid looks OK so far - rejects bad word")
+  // t.equal(isValGoodResult, true, "isValid looks OK so far - accepts good word")
 
   t.end()
 })
